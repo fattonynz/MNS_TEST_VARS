@@ -1,16 +1,30 @@
 vdom_name: ANZBAN
-pb_list:
-- GMSMTI
-- GMSMTI_SCOM
-- GMSCDI_BASE
-- GMSCDI_TACACS
-policy_package_name: MDR-ANZBAN
-dmz_services: true
+
 interfaces:
   vlans:
   - vlan_id: 3937
     name: 3937-BOR_INC
-    ip: 45.65.5.132/29
+    ip: 1.1.1.1
     zone: Z_BOR_INC
     type: vlan
     interface: MDRBLF Uplink
+
+gmscdi:
+  cust_subnets:
+  - subnet: 172.28.0.0/16
+    name: N-ANZBAN-172.28.0.0_16
+  - subnet: 10.0.0.0/8
+    name: N-ANZBAN-10.0.0.0_8
+  - subnet: 167.0.0.0/8
+    name: N-ANZBAN-167.0.0.0_8
+  - subnet: 214.251.255.0/24
+    name: N-ANZBAN-214.251.255.0_24
+  - subnet: 214.249.255.224/27
+    name: N-ANZBAN-214.249.255.224_27
+
+  corfw:
+  - gmscdi_int_vlan: 2306
+    corfwl_ip: 10.241.132.1/26
+  - gmscdi_int_vlan: 735
+    corfwl_ip: 10.241.77.129/27
+

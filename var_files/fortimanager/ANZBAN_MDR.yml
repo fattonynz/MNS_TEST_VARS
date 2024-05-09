@@ -1,0 +1,16 @@
+vdom_name: ANZBAN
+pb_list:
+- GMSMTI
+- GMSMTI_SCOM
+- GMSCDI_BASE
+- GMSCDI_TACACS
+policy_package_name: MDR-ANZBAN
+dmz_services: true
+interfaces:
+  vlans:
+  - vlan_id: 3937
+    name: 3937-BOR_INC
+    ip: 45.65.5.132/29
+    zone: Z_BOR_INC
+    type: vlan
+    interface: MDRBLF Uplink

@@ -1,0 +1,6 @@
+tenants:
+  ANZBAN:
+    enable_mlag_ibgp_peering_vrfs: false
+    l2vlans: {}
+    mac_vrf_vni_base: 0
+    vlan_aware_bundle_number_base: 0
